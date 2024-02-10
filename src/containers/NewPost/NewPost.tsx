@@ -1,7 +1,13 @@
+import {useParams} from 'react-router-dom';
+
 const NewPost = () => {
+  const params = useParams();
+
+  console.log(params.id);
+
   return (
     <div>
-      New Post
+      {params.id ? 'Edit Post' : 'New Post'}
     </div>
   );
 };
